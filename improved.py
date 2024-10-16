@@ -91,7 +91,7 @@ def enhance_search_query(query):
     2. Using advanced search operators if appropriate
     3. Making the query more specific and targeted
     Please provide only the enhanced query without any explanation.
-    For example: "keyword" "keyword" "keyword" "email:info"
+    For example: "keyword" "keyword" "keyword" "location" "info:email" "info:name"
     """
     try:
         print(f"[DEBUG] Enhancing Query: \n\t{query} with  \n\t{prompt}")
@@ -138,7 +138,7 @@ def google_search(query):
             links.append(url)
             print(f"[OUTPUT] Title: {title}\nURL: {url}\n")
         extracted_links = list(set(links))
-        print("[DEBUG] Extracted Links:", extracted_links)
+        print("[DEBUG] Extracted Links: ", len(extracted_links), extracted_links)
 
         print("[DEBUG] Extracting emails. ")
         all_emails = []
